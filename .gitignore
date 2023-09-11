@@ -1,5 +1,5 @@
 **/.DS_Store
 
-**/src/*
-!**/src/*.tex
-!**/src/*.pdf
+**/tex/*
+!**/tex/*.tex
+!**/tex/*.pdf
