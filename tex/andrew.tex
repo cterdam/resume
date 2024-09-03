@@ -1,0 +1,264 @@
+%!TeX program = lualatex
+% vim:foldmethod=marker
+
+\documentclass[letterpaper,11pt]{article}
+
+% IMPORTS {{{
+
+% Hyphenation and other language-specific settings
+\usepackage[english]{babel}
+
+% Define format for list entries
+\usepackage{enumitem}
+
+% Use custom font
+\usepackage{fontspec}
+
+% Reduce margins, remove header and footer
+\usepackage[empty]{fullpage}
+
+% Create hyperlinks
+\usepackage[hidelinks]{hyperref}
+
+% Define format for title, sections, etc.
+\usepackage{titlesec}
+
+% }}}
+% FORMATTING {{{
+
+% Set fonts
+\setmainfont{Liberation Serif}
+\setsansfont{Liberation Sans}
+\setmonofont{Liberation Mono}
+
+% Adjust margins
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\textheight}{1in}
+\setlength{\tabcolsep}{0in}
+\raggedbottom
+\raggedright
+
+% Section title
+
+\titleformat{\section}
+    {\vspace{-4pt}\bfseries\addfontfeatures{LetterSpace=9.12}}
+    {}
+    {0em}
+    {\MakeUppercase}
+    [\titlerule\vspace{-5pt}]
+
+% Itemize experiences for each section
+\newcommand{\resumeSubHeadingListStart}{
+    \begin{itemize}[leftmargin=0in, label={}]
+}
+\newcommand{\resumeSubHeadingListEnd}{
+    \end{itemize}
+}
+
+% Each entry consists of {institution, date, position, location}
+\newcommand{\resumeSubheading}[4]{
+    \vspace{-2pt}
+    \item
+        \begin{tabular*}{0.98\textwidth}[t]{
+            l
+            @{\extracolsep{\fill}}
+            r
+        }
+            \textbf{#1} & \textbf{#2} \\
+            \textit{\small#3} & \textit{\small#4} \\
+        \end{tabular*}
+        \vspace{-7pt}
+}
+
+% Itemize bullet-points for each entry
+\newcommand{\resumeItemListStart}{
+    \begin{itemize}
+}
+\newcommand{\resumeItemListEnd}{
+    \end{itemize}
+    \vspace{-5pt}
+}
+
+% Each list item
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+% }}}
+
+\begin{document}
+
+% TITLE {{{
+
+\begin{flushright}
+
+    \textbf{
+        \Huge
+        Liangze (Josh) Li
+    }
+    \\\small\vspace{6pt}
+    Millbrae, CA 94030
+    \hfill $ | $ \hfill
+    (+1) 412-726-6664
+    \hfill $ | $ \hfill
+    \href{mailto:me@llz.info}{\texttt{me@llz.info}}
+    \hfill $ | $ \hfill
+    \href{https://linkedin.com/in/cterdam}{\texttt{linkedin.com/in/cterdam}}
+    \hfill $ | $ \hfill
+    \href{https://github.com/cterdam}{\texttt{github.com/cterdam}}
+
+\end{flushright}
+
+% }}}
+% EDUCATION {{{
+
+\section{Education}
+
+\resumeSubHeadingListStart
+
+    \resumeSubheading
+        {Carnegie Mellon University}
+        {Aug 2024}
+        {Master of Science in Language Technologies}
+        {Pittsburgh, PA}
+
+    \resumeSubheading
+        {Carnegie Mellon University}
+        {May 2021}
+        {Bachelor of Science in Logic and Computation, Additional Major in Philosophy,
+                High Honors}
+        {Pittsburgh, PA}
+
+\resumeSubHeadingListEnd
+
+% }}}
+% EMPLOYMENT {{{
+
+\section{Employment}
+
+\resumeSubHeadingListStart
+
+    \resumeSubheading
+        {Google Deepmind}
+        {Sep 2024 -- Current}
+        {Research Engineer}
+        {Mountain View, CA}
+        \resumeItemListStart
+            \resumeItem{TBA 1}
+            \resumeItem{TBA 2}
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {Alphice}
+        {Jan 2024 -- Jul 2024}
+        {Co-Founder, CTO}
+        {Redwood City, CA}
+        \resumeItemListStart
+            \resumeItem{Spearhead architecture design and model deployment of generative
+                    AI workflow for storytelling}
+            \resumeItem{Lead cross-functional team to orchestrate data-driven operations
+                    initiative}
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {Oracle Labs}
+        {May 2023 -- Aug 2023}
+        {Research Assistant Intern}
+        {Burlington, MA}
+        \resumeItemListStart
+            \resumeItem{Devised a pipeline to train and evaluate LLMs with different
+                    Parameter-Efficient Fine-Tuning methods}
+            \resumeItem{Implemented a strategy to contrast and visualize important
+                    out-of-domain adaptation ability of LLMs}
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {Carnegie Mellon University}
+        {Jan 2023 -- May 2024}
+        {Teaching Assistant}
+        {Pittsburgh, PA}
+        \resumeItemListStart
+            \resumeItem{Taught recitations for 100+ students on DL concepts and mentored
+                    30+ students on DL theory and projects}
+            \resumeItem{Reproduced milestone papers including ConvNeXt, ResNet,
+                    Attention, and set standards for students}
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {Carnegie Mellon University}
+        {Jan 2023 -- May 2023}
+        {Team Lead - Amazon Alexa Social Bot Challenge}
+        {Pittsburgh, PA}
+        \resumeItemListStart
+            \resumeItem{Led team of 6 to benchmark and deploy large language models
+                    (LLM) to build conversational agent}
+            \resumeItem{Applied knowledge distillation techniques to achieve
+                    conversational continuity}
+        \resumeItemListEnd
+
+    \resumeSubheading
+        {Tencent}
+        {Jul 2021 -- Apr 2022}
+        {Tecnical Product Specialist}
+        {Shenzhen, China}
+        \resumeItemListStart
+            \resumeItem{Led team of 4 to develop data analytics module to predict profit
+                    margins over 5000+ SaaS products}
+            \resumeItem{Formulated GMV growth as sentiment analysis task, deployed LLM
+                    to achieve 12\% growth in select categories}
+        \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% }}}
+
+% PUBLICATIONS {{{
+
+\section{Publications}
+\begin{itemize}[leftmargin=0.15in, label={--}]
+    \small{
+        \item{
+            \textbf{Liangze Li}, et al. Can Large Language Models really do math?
+            NeurIPS 2024 (Pending).\\
+        }
+        \item{
+            Shih-Lun Wu, Yi-Hui Chou, and \textbf{Liangze Li}. Listener model for the
+            PhotoBook referential game with CLIPScores as implicit reference chain.
+            ACL 2023.\\
+        }
+    }
+ \end{itemize}
+
+% }}}
+
+%-----------Courses-----------
+\section{Classes}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \vspace{1mm}
+     \textbf{Courses}{: AP Calulus BC, AP Chemistry, AP Physics, AP World History, AP U.S. History, AP Statistics, AP Literature} \\
+
+    }}
+ \end{itemize}
+
+%-----------Skill and Interests-----------
+\section{Skills \& Interests}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \vspace{1mm}
+     \textbf{Skills}{: Probability Theory, Web Design, Microsoft Excel, Microsoft Office} \\
+     \vspace{1mm}
+     \textbf{Interests}{: Photography, Creative Writing, Archery, New York Knicks} \\
+     \vspace{1mm}
+
+    }}
+ \end{itemize}
+
+
+
+\end{document}
