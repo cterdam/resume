@@ -42,7 +42,6 @@
 \raggedright
 
 % Section title
-
 \titleformat{\section}
     {\vspace{-4pt}\bfseries\addfontfeatures{LetterSpace=9.12}}
     {}
@@ -70,11 +69,12 @@
             \textbf{#1} & \textbf{#2} \\
             \textit{\small#3} & \textit{\small#4} \\
         \end{tabular*}
-        \vspace{-7pt}
+        \vspace{-5pt}
 }
 
 % Itemize bullet-points for each entry
 \newcommand{\resumeItemListStart}{
+    \vspace{-2pt}
     \begin{itemize}
 }
 \newcommand{\resumeItemListEnd}{
@@ -87,6 +87,18 @@
   \item\small{
     {#1 \vspace{-2pt}}
   }
+}
+
+% Simple list not requiring subheadings
+\newcommand{\simpleListStart}{
+    \begin{itemize}[leftmargin=0.15in, label={--}]
+}
+\newcommand{\simpleListEnd}{
+    \end{itemize}
+    \vspace{-9pt}
+}
+\newcommand{\simpleListItem}[1]{
+    \item #1 \vspace{-2pt}
 }
 
 % }}}
@@ -144,13 +156,15 @@
 \resumeSubHeadingListStart
 
     \resumeSubheading
-        {Google Deepmind}
-        {Sep 2024 -- Current}
+        {Google DeepMind}
+        {Sep 2024 -- \textit{Current}}
         {Research Engineer}
         {Mountain View, CA}
         \resumeItemListStart
-            \resumeItem{TBA 1}
-            \resumeItem{TBA 2}
+            \resumeItem{Explore novel modelling methods for controllable
+                    training of agentic conversational systems.}
+            \resumeItem{Develop experiment pipelines consisting of data collection and
+                    processing, rapid prototyping, and model benchmarking.}
         \resumeItemListEnd
 
     \resumeSubheading
@@ -159,9 +173,9 @@
         {Co-Founder, CTO}
         {Redwood City, CA}
         \resumeItemListStart
-            \resumeItem{Spearhead architecture design and model deployment of generative
-                    AI workflow for storytelling}
-            \resumeItem{Lead cross-functional team to orchestrate data-driven operations
+            \resumeItem{Spearheaded architecture design and model deployment of
+                    generative AI workflow for storytelling}
+            \resumeItem{Led cross-functional team to orchestrate data-driven operations
                     initiative}
         \resumeItemListEnd
 
@@ -216,49 +230,56 @@
 \resumeSubHeadingListEnd
 
 % }}}
-
 % PUBLICATIONS {{{
 
 \section{Publications}
-\begin{itemize}[leftmargin=0.15in, label={--}]
-    \small{
-        \item{
-            \textbf{Liangze Li}, et al. Can Large Language Models really do math?
-            NeurIPS 2024 (Pending).\\
-        }
-        \item{
-            Shih-Lun Wu, Yi-Hui Chou, and \textbf{Liangze Li}. Listener model for the
-            PhotoBook referential game with CLIPScores as implicit reference chain.
-            ACL 2023.\\
-        }
+
+\simpleListStart
+
+    \simpleListItem{
+        Shih-Lun Wu, Yi-Hui Chou, and \textbf{Liangze Li}. Listener model for
+        the PhotoBook referential game with CLIPScores as implicit reference
+        chain. \textit{ACL 2023}.\\
     }
- \end{itemize}
+
+    \simpleListItem{
+        Yutian Chen, Hao Kang, Vivian Zhai, \textbf{Liangze Li}, et al. Token
+        Prediction as Implicit Classification to Identify LLM-Generated Text.
+        \textit{EMNLP 2023}.\\
+    }
+
+\simpleListEnd
 
 % }}}
+% SERVICE {{{
 
-%-----------Courses-----------
-\section{Classes}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-    \vspace{1mm}
-     \textbf{Courses}{: AP Calulus BC, AP Chemistry, AP Physics, AP World History, AP U.S. History, AP Statistics, AP Literature} \\
+\section{Service}
 
-    }}
- \end{itemize}
+\resumeSubHeadingListStart
 
-%-----------Skill and Interests-----------
-\section{Skills \& Interests}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-    \vspace{1mm}
-     \textbf{Skills}{: Probability Theory, Web Design, Microsoft Excel, Microsoft Office} \\
-     \vspace{1mm}
-     \textbf{Interests}{: Photography, Creative Writing, Archery, New York Knicks} \\
-     \vspace{1mm}
+    \resumeSubheading
+        {CMU Blackjack Society}
+        {Jan 2023 -- May 2024}
+        {Founder, President}
+        {Carnegie Mellon University}
+        \resumeItemListStart
+            \resumeItem{Organized Blackjack training and headed development of
+                    simulator for strategy benchmarking.}
+        \resumeItemListEnd
 
-    }}
- \end{itemize}
+    \resumeSubheading
+        {CMU Student College Executive Committee}
+        {Aug 2020 -- May 2021}
+        {President}
+        {Carnegie Mellon University}
+        \resumeItemListStart
+            \resumeItem{Coordinated with university registrar to deliver
+                    accreditation for student-designed and -taught elective
+                    courses.}
+        \resumeItemListEnd
 
+\resumeSubHeadingListEnd
 
+% }}}
 
 \end{document}
