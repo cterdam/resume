@@ -1,5 +1,5 @@
 **/.DS_Store
 
-**/tex/*
-!**/tex/*.tex
-!**/tex/*.pdf
+*
+!**/*.tex
+!**/*.pdf
